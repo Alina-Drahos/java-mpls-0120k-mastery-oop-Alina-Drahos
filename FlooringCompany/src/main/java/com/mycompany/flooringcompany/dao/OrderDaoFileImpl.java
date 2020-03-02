@@ -211,6 +211,7 @@ public class OrderDaoFileImpl implements OrderDao {
     }
 
     private void writeToOrderFile(LocalDate fileDate, Order o) throws FlooringCompanyPersistenceException {
+        allOrders.clear();
         if (doesFileExist(fileDate)) {
             loadOrderFile(fileDate);
         }

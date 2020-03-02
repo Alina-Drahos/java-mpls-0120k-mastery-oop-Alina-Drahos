@@ -2,4 +2,4 @@ OrderNumber,CustomerName,State,TaxRate,ProductType,Area,CostPerSquareFoot,LaborC
 1,"Alina,Drahos",CA,25.00,Tile,120,3.50,4.15,420.00,498.00,229.50,1147.50,02-29-2020
 4,"Jon,Doe",WA,9.25,Laminate,240,1.75,2.10,420.00,504.00,85.47,1009.47,03-01-2020
 6,"Gopher",CA,25.00,Wood,120,5.15,4.75,618.00,570.00,297.00,1485.00,03-01-2020
-5,"Alina,Drahos",CA,25.00,Wood,100,5.15,4.75,515.00,475.00,247.50,1237.50,03-01-2020
+7,"Alina,Gopher",CA,25.00,Carpet,300,2.25,2.10,675.00,630.00,326.25,1631.25,03-02-2020
