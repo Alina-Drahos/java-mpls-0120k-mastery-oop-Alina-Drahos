@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="
+                http://www.springframework.org/schema/beans
+                http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="io" class="com.mycompany.flooringcompany.ui.UserIOConsoleImpl"/>
+    
+    <bean id="view" class="com.mycompany.flooringcompany.ui.FlooringCompanyView">
+        <constructor-arg ref="io"/>
+    </bean>
+   
+    
+    <bean id="taxDao" class="com.mycompany.flooringcompany.dao.TaxDaoFileImpl">
+        <constructor-arg type="String" value="Data\\Taxes.txt"/>
+    </bean>
+    <bean id="productDao" class="com.mycompany.flooringcompany.dao.ProductDaoFileImpl">
+        <constructor-arg type="String" value="Data\\Products.txt"/>
+    </bean>
+    <bean id="orderDao" class="com.mycompany.flooringcompany.dao.OrderDaoFileImpl">
+        <constructor-arg type="String" value="Orders"/>
+    </bean>    
+    <bean id="exportDao" class="com.mycompany.flooringcompany.dao.ExportDaoFileImpl">
+        <constructor-arg type="String" value="Orders"/>
+        <constructor-arg type="String" value="ExportOrders\\ExportOrdes.txt"/>
+    </bean>
+    
+    <bean id="service" class="com.mycompany.flooringcompany.service.FlooringCompanyService">
+        <constructor-arg ref="taxDao"/>
+        <constructor-arg ref="productDao"/>
+        <constructor-arg ref="orderDao"/>
+        <constructor-arg ref="exportDao"/>
+                          
+    </bean>
+    
+ 
+    
+    
+    <bean id="controller" class="com.mycompany.flooringcompany.controller.FlooringCompanyController">
+        <constructor-arg ref="view"/>
+        <constructor-arg ref="service"/>        
+    </bean>
+
+</beans>

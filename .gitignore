@@ -441,3 +441,5 @@ $RECYCLE.BIN/
 
 # Windows shortcuts
 *.lnk
+/FlooringCompany/nbproject/
+/FlooringCompany/target/
