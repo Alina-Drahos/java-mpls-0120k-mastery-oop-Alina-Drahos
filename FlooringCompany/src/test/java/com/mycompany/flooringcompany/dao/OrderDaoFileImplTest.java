@@ -60,7 +60,7 @@ public class OrderDaoFileImplTest {
     public void testAddAndGetOrder() throws FlooringCompanyPersistenceException {
         Order newOrder = new Order(1, "Ada Lovelace", "CA", new BigDecimal("25.00"), "Tile", new BigDecimal("249.00"),
                 new BigDecimal("3.50"), new BigDecimal("4.15"), new BigDecimal("871.50"), new BigDecimal("1033.35"),
-                new BigDecimal("476.21"), new BigDecimal("2381.06"), java.time.LocalDate.now());
+                new BigDecimal("476.21"), new BigDecimal("2381.06"), LocalDate.of(2020, 03, 01));
         testDao.createAnOrder(newOrder);
         Order myOrder = testDao.getOrder(LocalDate.of(2020, 03, 01), 1);
         assertEquals(1, myOrder.getOderNumber());
